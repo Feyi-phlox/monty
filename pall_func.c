@@ -8,7 +8,7 @@
 
 void pall(stack_t **stack, unsigned int l_number)
 {
-	(void)line_number;
+	(void)l_number;
 	stack_t *current = *stack;
 	
 	while (current)
