@@ -1,5 +1,7 @@
 # monty
-0x19. C - Stacks, Queues - LIFO, FIFO project created by Akinbobola Feyisayo (feyisayoakinbobola@gmail.com) and Asante Emmanuel (asantemma7@gmail.com)
+0x19. C - Stacks, Queues - LIFO, FIFO project 
+Created by: Akinbobola Feyisayo (feyisayoakinbobola@gmail.com) and
+Asante Emmanuel (asantemma7@gmail.com)
 
 Tasks
 0. push, pall
