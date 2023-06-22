@@ -41,25 +41,23 @@ int main(int argc, char *argv[])
 	}
 	free(line);
 	fclose(file);
-	free_stack(stack);
+	free_stack();
 	return (EXIT_SUCCESS);
 }
 /**
  * free_stack - function that frees stack
- * @stack: stack
  * Return: void
  */
 
-void free_stack(stack_t *stack)
+void free_stack(void)
 {
-	stack_t *current;
+	stack_t *current = stack;
+	stack_t *temp;
 
-	current = stack;
-
-	while (stack)
+	while (current != NULL)
 	{
-		current = stack->next;
-		free(stack);
-		stack = current;
+		temp = current;
+		current = current->next;
+		free(temp);
 	}
 }
