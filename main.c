@@ -46,14 +46,15 @@ int main(int argc, char *argv[])
 }
 /**
  * free_stack - function that frees stack
+ * @stack: stack
  * Return: void
  */
 
 void free_stack(stack_t *stack)
 {
 	stack_t *current;
+
 	current = stack;
-	
 
 	while (stack)
 	{
