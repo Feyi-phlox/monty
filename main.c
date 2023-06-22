@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 	}
 	free(line);
 	fclose(file);
-	free_stack();
+	free_stack(stack);
 	return (EXIT_SUCCESS);
 }
 /**
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
  * Return: void
  */
 
-void free_stack(void)
+void free_stack(stack_t *stack)
 {
 	stack_t *current = stack;
 	stack_t *temp;
