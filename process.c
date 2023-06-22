@@ -1,26 +1,30 @@
 #include "monty.h"
 
 /**
- * process - function that processes opcode
+ * process_cmd - function that processes opcode
  * @opcode: operation code
- * @stack: stack
  * @line_number: line number
  * Return: void
  */
 
-void process(char *opcode, stack_t **stack, unsigned int line_number)
+void process_cmd(char *opcode, unsigned int line_number)
 {
-	if (strcmp(opcode, "push") == 0)
-	{
-		push(stack, line_number);
-	}
-	else if (strcmp(opcode, "pall") == 0)
-	{
-		pall(stack, line_number);
-	}
-	else
-	{
+	int i;
+	instruction_t cmd[] = {
+		{"push", push},
+		{"pall", pall},
+		{NULL, NULL}};
+
+		for (i = 0; cmd[i].opcode != NULL; i++)
+		{
+			if (strcmp(opcode, cmd[i].opcode) == 0)
+			{
+				cmd[i].f(&stack, line_number);
+				return;
+			}
+		}
+
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+		free_stack();
 		exit(EXIT_FAILURE);
-	}
 }
