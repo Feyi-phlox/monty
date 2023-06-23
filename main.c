@@ -2,6 +2,7 @@
 #include "monty.h"
 
 void free_stack(void);
+void free_memory(FILE *file, char *line);
 stack_t *stack = NULL;
 
 /**
@@ -39,9 +40,9 @@ int main(int argc, char *argv[])
 		if (opcode != NULL && opcode[0] != '#')
 			process_cmd(opcode, line_number);
 	}
-	free(line);
-	fclose(file);
-	free_stack();
+
+	free_memory(file, line);
+
 	return (EXIT_SUCCESS);
 }
 /**
@@ -60,4 +61,18 @@ void free_stack(void)
 		current = current->next;
 		free(temp);
 	}
+}
+
+/**
+ * free_memory - function that frees memory
+ * @file: file pointer
+ * @line: line pointer
+ * Return: void
+ */
+void free_memory(FILE *file, char *line)
+{
+	fclose(file);
+	if (line != NULL)
+		free(line);
+	free_stack();
 }
