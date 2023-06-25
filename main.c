@@ -37,8 +37,10 @@ int main(int argc, char *argv[])
 	{
 		line_number++;
 		opcode = strtok(line, " \n\t\r");
-		if (opcode != NULL && opcode[0] != '#')
+		if (opcode != NULL || opcode[0] != '#')
+		{
 			process_cmd(opcode, line_number);
+		}
 	}
 
 	free_memory(file, line);

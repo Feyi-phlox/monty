@@ -29,7 +29,6 @@ void process_cmd(char *opcode, unsigned int line_number)
 		free_stack();
 		exit(EXIT_FAILURE);
 	}
-
 	for (i = 0; cmd[i].opcode != NULL; i++)
 	{
 		if (strcmp(opcode, cmd[i].opcode) == 0)

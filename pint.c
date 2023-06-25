@@ -8,7 +8,7 @@
  */
 void pint(stack_t **stack, unsigned int line_number)
 {
-	int value = (*stack)->n;
+	int value;
 
 	if (*stack == NULL)
 	{
@@ -16,6 +16,7 @@ void pint(stack_t **stack, unsigned int line_number)
 		free_stack();
 		exit(EXIT_FAILURE);
 	}
+	value = (*stack)->n;
 	printf("%d\n", value);
 }
 
@@ -27,7 +28,6 @@ void pint(stack_t **stack, unsigned int line_number)
 void pop(stack_t **stack, unsigned int line_num)
 {
 	stack_t *temp = *stack;
-	*stack = (*stack)->next;
 
 	if (*stack == NULL)
 	{
@@ -35,7 +35,7 @@ void pop(stack_t **stack, unsigned int line_num)
 		free_stack();
 		exit(EXIT_FAILURE);
 	}
-
+	*stack = (*stack)->next;
 	if (*stack != NULL)
 		(*stack)->prev = NULL;
 	free(temp);
