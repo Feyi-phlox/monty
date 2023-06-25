@@ -41,6 +41,7 @@ typedef struct instruction_s
 extern stack_t *stack;
 
 void free_stack(void);
+void swap(stack_t **stack, unsigned int line_number);
 void free_memory(FILE *file, char *line);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_num);
