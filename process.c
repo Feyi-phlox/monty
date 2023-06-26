@@ -16,6 +16,9 @@ void process_cmd(char *opcode, unsigned int line_number)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
+		{"sub", sub},
 		{NULL, NULL}};
 
 	if (opcode == NULL)
