@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
-* div_func - divides the second top element by the top element of the stack
+* div - divides the second top element by the top element of the stack
 * @stack: stack
 * @line_number: line number
 * Return: 0 on success
 */
 
-void div_func(stack_t **stack, unsigned int line_number)
+void div(stack_t **stack, unsigned int line_number)
 {
 	stack_t *top;
 	stack_t *second_top;
