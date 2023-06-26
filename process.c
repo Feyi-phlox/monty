@@ -19,6 +19,7 @@ void process_cmd(char *opcode, unsigned int line_number)
 		{"add", add},
 		{"nop", nop},
 		{"sub", sub},
+		{"div", div_func},
 		{NULL, NULL}};
 
 	if (opcode == NULL)
