@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		{
 			process_cmd(opcode, line_number);
 		}
-		else if (opcode[0] == '#' || opcode[0] == '\n')
+		else if (opcode[0] == '#')
 		continue;
 	}
 
