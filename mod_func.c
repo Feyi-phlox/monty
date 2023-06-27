@@ -1,4 +1,4 @@
-#include "monty"
+#include "monty.h"
 /**
  * mod - finds remainder of 2nd divided by top element of the stack
  * @stack: stack
