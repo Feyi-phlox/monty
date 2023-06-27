@@ -9,7 +9,7 @@
 
 void pchar(stack_t **stack, unsigned int line_number)
 {
-	unsigned int value;
+	int value;
 
 	if (*stack == NULL)
 	{
