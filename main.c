@@ -41,8 +41,6 @@ int main(int argc, char *argv[])
 		{
 			process_cmd(opcode, line_number);
 		}
-		else if (opcode[0] == '#')
-		continue;
 	}
 
 	free_memory(file, line);
