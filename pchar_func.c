@@ -9,7 +9,7 @@
 
 void pchar(stack_t **stack, unsigned int line_number)
 {
-	int value;
+	stack_t value;
 
 	if (*stack == NULL)
 	{
@@ -24,6 +24,5 @@ void pchar(stack_t **stack, unsigned int line_number)
 	fprintf(stderr, "L%u: can't pchar, value out of range\n", line_number);
 	exit(EXIT_FAILURE);
 	}
-
 	printf("%c\n", value);
 }
